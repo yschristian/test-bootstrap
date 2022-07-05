@@ -25,19 +25,44 @@
       .zamuka{
         top:-25px !important;
         position: relative;
+        z-index: 0.5;
+
       }
       .content{
         margin-top: 10rem !important;
+        z-index: -1;
+        position: relative;
       }
       .btn{
         width: 20%;
       }
+      nav{
+        z-index: 1000;
+        height: auto;
+        scroll-behavior: smooth;
+        transition: 0.3s ease-in-out;
+      }
+      
+      .nav-active {
+    background-color:#fff !important;
+    box-shadow: 5px -1px 12px -5px grey;
+    height: auto;
+  }
       @media (max-width:1000px){
+        /* nav{
+          z-index: 100;
+          background-color: green;
+          position: relative;
+          width: 100vw !important;
+          margin: 0 !important;
+        } */
         .btn{
-        width: 100%;
-          padding: 5px 35px;
+         width: 90%;
+          padding: 4px 30px;
           font-size: 12px !important;
           margin: 0 5px;
+          z-index: 1000;
+          /* background-color: green; */
       }
         .phone-version{
           position: fixed;
@@ -46,12 +71,18 @@
           width: 75%;
         }
         .nav-button{
-          position: relative;
+          position: fixed;
           top: inherit;
           left: 85%;
+          z-index: 10000;
+          /* background-color: red; */
+          margin-left: 10px;
+          margin-right: 10px;
         }
         .nv-elements{
           padding-top: 15px;
+          position: relative;
+          top:40px; 
         }
       }
     </style>
@@ -65,12 +96,12 @@
             <div class="mt-1">
               <img src="./logo.jpg" alt="logo" class="img-fluid w-25" />
             </div>
-            <div class="w-50  d-flex justify-content-around">
+            <div class="w-50  d-flex justify-content-around ">
               <div class="d-flex justify-content-around container">
-                <button class="btn btn-primary btn-sm rounded-pill">
+                <button class="btn btn-primary btn-sm rounded-pill fs-3 text">
                   Register
                 </button>
-                <button class="btn btn-outline rounded-pill border border-secondary">contactus</button>
+                <button class="btn btn-outline rounded-pill border border-secondary fs-3 text">Contact us</button>
               </div>
             </div>
           
@@ -87,17 +118,17 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon "></span>
           </button>
-          <div class="collapse navbar-collapse nv-elements" id="navbarNavAltMarkup">
+          <div class="collapse navbar-collapse nv-elements" id="navbarNavAltMarkup" >
             <div class="navbar-nav w-100 d-flex justify-content-between h4">
-              <a class="nav-link text-primary" href="#">Directory</a>
-              <a class="nav-link text-primary" href="#">Job</a>
-              <a class="nav-link text-primary" href="#">Advert</a>
-              <a class="nav-link text-primary" href="#">Schorlaship</a>
-              <a class="nav-link text-primary" href="#">Internship</a>
-              <a class="nav-link text-primary" href="#">Grant</a>
-              <a class="nav-link text-primary" href="#">Tender</a>
+              <a class="nav-link text-primary fs-2 text" href="#">Directory</a>
+              <a class="nav-link text-primary fs-2 text" href="#">Job</a>
+              <a class="nav-link text-primary fs-2 text" href="#">Advert</a>
+              <a class="nav-link text-primary fs-2 text" href="#">Schorlaship</a>
+              <a class="nav-link text-primary fs-2 text" href="#">Internship</a>
+              <a class="nav-link text-primary fs-2 text" href="#">Grant</a>
+              <a class="nav-link text-primary fs-2 text" href="#">Tender</a>
             </div>
           </div>
           </div>
@@ -113,7 +144,7 @@
               <span class="text-white text-bold h2"
                 ><i class="bi bi-currency-dollar"></i
               ></span>
-              <div class="text-bold text-white">Forex bureu</div>
+              <div class="text-bold text-white fs-4 text">Forex bureu</div>
             </div>
             <div
               class="col-md-3 col-lg-2 bg-secondary rounded-2 text-bold py-5 d-flex flex-column align-items-center me-3 mb-3"
@@ -121,14 +152,14 @@
               <span class="text-white text-bold h2"
                 ><i class="bi bi-hospital"></i
               ></span>
-              <div class="text-bold text-white">Health facilities</div>
+              <div class="text-bold text-white fs-4 ">Health facilities</div>
             </div>
             <div
               class="col-md-3 col-lg-2 bg-secondary rounded-2 text-bold py-5 d-flex flex-column align-items-center me-3 mb-3"
             >
               <span class="text-white text-bold h2"
                 ><i class="bi bi-hand-thumbs-up"></i></span>
-              <div class="text-bold text-white">Tvet schools</div>
+              <div class="text-bold text-white fs-4 ">TVET Schools</div>
             </div>
           </div>
           <div class="row d-flex justify-content-center">
@@ -136,24 +167,23 @@
               class="col-md-3 col-lg-2 bg-secondary rounded-2 text-bold py-5 d-flex flex-column align-items-center me-3 mb-3"
             >
               <span class="text-white text-bold h2"
-                ><i class="bi bi-hand-thumbs-up"></i></span>
-                <div class="text-bold text-white">Political parties</div>
+                ><i class="bi bi-hammer"></i></span>
+                <div class="text-bold text-white fs-4 ">Political parties</div>
             </div>
             <div
               class="col-md-3 col-lg-2 bg-secondary rounded-2 text-bold py-5 d-flex flex-column align-items-center me-3 mb-3"
             >
               <span class="text-white text-bold h2"
-                ><i class="bi bi-hospital"></i
+                ><i class="bi bi-flag"></i
               ></span>
-              <div class="text-bold text-white">Forex bureu</div>
+              <div class="text-bold text-white fs-4 ">UN Agencies</div>
             </div>
             <div
               class="col-md-3 col-lg-2 bg-secondary rounded-2 text-bold py-5 d-flex flex-column align-items-center me-3 mb-3"
             >
               <span class="text-white text-bold h2"
-                ><i class="bi bi-currency-dollar"></i
-              ></span>
-              <div class="text-bold text-white">Forex bureu</div>
+                ><i class="bi bi-people"></i></span>
+              <div class="text-bold text-white fs-4 ">NGOs</div>
             </div>
           </div>
           <div class="row d-flex justify-content-center">
@@ -163,10 +193,10 @@
             <div
               class="col-md-3 col-lg-2 bg-secondary rounded-2 text-bold py-5 d-flex flex-column align-items-center me-3 mb-3"
             >
-              <span class="text-white text-bold h2"
-                ><i class="bi bi-currency-dollar"></i
-              ></span>
-              <div class="text-bold text-white">Forex bureu</div>
+              <span class="text-white text-bold h2">
+                <i class="bi bi-play-btn"></i>
+              </span>
+              <div class="text-bold text-white fs-4 ">Online Media</div>
             </div>
           </div>
 
@@ -174,26 +204,25 @@
             <div
               class="col-md-3 col-lg-2 bg-secondary rounded-2 text-bold py-5 d-flex flex-column align-items-center me-3 mb-3"
             >
-              <span class="text-white text-bold h2"
-                ><i class="bi bi-currency-dollar"></i
-              ></span>
-              <div class="text-bold text-white">Forex bureu</div>
+              <span class="text-white text-bold h2">
+                <i class="bi bi-tv"></i>
+              </span>
+              <div class="text-bold text-white fs-4 ">TVs</div>
             </div>
             <div
               class="col-md-3 col-lg-2 bg-secondary rounded-2 text-bold py-5 d-flex flex-column align-items-center me-3 mb-3"
             >
               <span class="text-white text-bold h2"
-                ><i class="bi bi-hospital"></i
-              ></span>
-              <div class="text-bold text-white">Forex bureu</div>
+                ><i class="bi bi-building"></i></span>
+              <div class="text-bold text-white fs-4 ">Professional <br> Organisation</div>
             </div>
             <div
               class="col-md-3 col-lg-2 bg-secondary rounded-2 text-bold py-5 d-flex flex-column align-items-center me-3 mb-3"
             >
-              <span class="text-white text-bold h2"
-                ><i class="bi bi-currency-dollar"></i
-              ></span>
-              <div class="text-bold text-white">Forex bureu</div>
+              <span class="text-white text-bold h2">
+              <i class="bi bi-broadcast"></i>
+            </span>
+              <div class="text-bold text-white fs-4 ">Radio</div>
             </div>
           </div>
 
@@ -207,5 +236,6 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <script src="./index.js"></script>
   </body>
 </html>
